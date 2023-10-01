@@ -1,2 +1,2 @@
-import { sumMult } from "./lineAlg/sumMult";
+import { sumMult } from "./linearAlg/sumMult";
 
