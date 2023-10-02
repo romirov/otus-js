@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "prettier": "prettier --write src/**/*.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
@@ -28,6 +29,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "jest-environment-jsdom": "^29.7.0"
   }
 }
