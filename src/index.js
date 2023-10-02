@@ -6,3 +6,5 @@ import { getMonth } from "./conditions/getMonthByNumber";
 
 import { sum } from "./cycles/sum";
 import { multTable } from "./cycles/multTable";
+
+import { addFieldToObject } from "./objects/addFieldToObject";
