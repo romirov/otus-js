@@ -11,3 +11,9 @@ import { addFieldToObject } from "./objects/addFieldToObject";
 import { copyObjectWithNewField } from "./objects/copyObjectWithNewField";
 
 import { sumArrayElements } from "./arrays/sumArrayElements";
+
+import { diff } from "./function/diff";
+
+import { workWithDom } from "./dom/workWithDom";
+
+workWithDom();
