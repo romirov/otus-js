@@ -20,6 +20,10 @@ workWithDom();
 
 
 import { getDayOfWeekByDate } from "./builtInTools/getDayOfWeekByDate";
-
-
 import { getMinutesPassedSinceBeginningDay } from "./builtInTools/getMinutesPassedSinceBeginningDay";
+
+import { getCircleLenghtAndSquare } from "./math/getCircleLenghtAndSquare";
+import { isTriangleRightAngled } from "./math/isTriangleRightAngled";
+
+import { validateDateByRegExp } from "./regularExpression/validateDateByRegExp";
+import { validateEmailByRegExp } from "./regularExpression/validateEmailByRegExp";

@@ -8,7 +8,7 @@ describe('get day of week by date', () => {
         expect(console.log.mock.calls[0][0]).toBe("Thursday");
     });
 
-    test('get day by wron day', () => {
+    test('get day by wrong day', () => {
         console.log = jest.fn();
         jest.spyOn(window, "prompt").mockImplementation(() => "2023.10.05");
         getDayOfWeekByDate();
