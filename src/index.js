@@ -17,3 +17,9 @@ import { diff } from "./function/diff";
 import { workWithDom } from "./dom/workWithDom";
 
 workWithDom();
+
+
+import { getDayOfWeekByDate } from "./builtInTools/getDayOfWeekByDate";
+
+
+import { getMinutesPassedSinceBeginningDay } from "./builtInTools/getMinutesPassedSinceBeginningDay";
