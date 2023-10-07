@@ -32,5 +32,11 @@ module.exports = {
         "react"
     ],
     "rules": {
+		"max-len": [
+			"error",
+			{
+				ignoreComments: true,
+			},
+		],
     }
 }
