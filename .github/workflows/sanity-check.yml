@@ -11,11 +11,10 @@ jobs:
 
       - name: Install Packages
         run: |
-          yarn install
+          npm install
       - name: Lint
         run: |
-          yarn lint
+          npm run lint
       - name: Build
         run: |
-          npx reveal-md lessons/ --static dist
-          rsync -a -r lessons/ dist/
+          npm run build
