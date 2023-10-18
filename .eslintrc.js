@@ -1,42 +1,35 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
+  env: {
+    browser: true,
+    es2021: true,
+    'jest/globals': true,
+  },
+  extends: 'airbnb-base',
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: [
+        '.eslintrc.{js,cjs}',
+      ],
+      parserOptions: {
+        sourceType: 'script',
+      },
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['jest'],
+  rules: {
+    'max-len': [
+      'error',
+      {
+        ignoreComments: true,
+      },
     ],
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "@typescript-eslint",
-        "react"
-    ],
-    "rules": {
-		"max-len": [
-			"error",
-			{
-				ignoreComments: true,
-			},
-		],
-    }
-}
+    'import/prefer-default-export': 'off',
+  },
+};

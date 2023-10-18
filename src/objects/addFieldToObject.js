@@ -1,10 +1,10 @@
-function User(name){
-    this.name = name;
+function User(name) {
+  this.name = name;
 }
 
-export let user = new User("John");
+export const user = new User('John');
 
-export function addFieldToObject(){
-    let age = prompt("Enter age: ");
-    user.age = age;
+export function addFieldToObject() {
+  const age = prompt('Enter age: ');
+  user.age = age;
 }

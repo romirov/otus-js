@@ -1,4 +1,4 @@
-export function sumMult(a, b){
-    console.log(a + b)
-    console.log(a * b)
+export function sumMult(a, b) {
+  console.log(a + b);
+  console.log(a * b);
 }

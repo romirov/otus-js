@@ -1,5 +1,5 @@
-export function getMinutesPassedSinceBeginningDay(){
-    let now = new Date();
-    let minutesPassedSinceBeginningDay = (now.getHours() * 60) + now.getMinutes()
-    console.log(minutesPassedSinceBeginningDay);
+export function getMinutesPassedSinceBeginningDay() {
+  const now = new Date();
+  const minutesPassedSinceBeginningDay = (now.getHours() * 60) + now.getMinutes();
+  console.log(minutesPassedSinceBeginningDay);
 }

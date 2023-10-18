@@ -1,7 +1,7 @@
-export function getCircleLenghtAndSquare(){
-    let radius = prompt("Enter circle radius: ");
+export function getCircleLenghtAndSquare() {
+  const radius = prompt('Enter circle radius: ');
 
-    let circleLenght = 2 * Math.PI * radius;
-    let circleSquare = Math.PI * Math.pow(radius, 2);
-    console.log(`C = ${circleLenght}, L = ${circleSquare}`)
+  const circleLenght = 2 * Math.PI * radius;
+  const circleSquare = Math.PI * radius ** 2;
+  console.log(`C = ${circleLenght}, L = ${circleSquare}`);
 }

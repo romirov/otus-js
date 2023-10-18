@@ -1,9 +1,9 @@
-import { copyObjectWithNewField } from "./copyObjectWithNewField";
+import { copyObjectWithNewField } from './copyObjectWithNewField';
 
 describe('object copy', () => {
-    test('copy object with new field', () => {
-        let admin = copyObjectWithNewField()
-        expect(admin).toHaveProperty('name', 'admin')
-        expect(admin).toHaveProperty('role', 'admin')
-    });
+  test('copy object with new field', () => {
+    const admin = copyObjectWithNewField();
+    expect(admin).toHaveProperty('name', 'admin');
+    expect(admin).toHaveProperty('role', 'admin');
   });
+});
