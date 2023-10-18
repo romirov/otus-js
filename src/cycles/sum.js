@@ -1,7 +1,9 @@
 export function sum() {
-  let sum = 0;
+  let summary = 0;
+  // eslint-disable-next-line no-plusplus
   for (let i = 50; i <= 100; i++) {
-    sum += i;
+    summary += i;
   }
-  console.log(sum);
+  // eslint-disable-next-line no-console
+  console.log(summary);
 }

@@ -1,3 +1,4 @@
+// eslint-disable-next-line consistent-return
 export function isTriangleRightAngled(...args) {
   const sides = args.slice(0, 3).sort();
   if (sides[0] + sides[1] <= sides[2]) {
