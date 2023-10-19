@@ -5,6 +5,10 @@ describe('check string on words', () => {
     expect(isWord('one')).toBe(true);
   });
 
+  test('another one word equals true', () => {
+    expect(isWord('word')).toBe(true);
+  });
+
   test('two words equals false', () => {
     expect(isWord('one two')).toBe(false);
   });
