@@ -1,6 +1,5 @@
 export function getMonthByNumber() {
   const months = [
-    '',
     'January',
     'February',
     'March',
@@ -14,7 +13,7 @@ export function getMonthByNumber() {
     'November',
     'December'];
   // eslint-disable-next-line no-alert
-  const result = prompt('Enter month number: ');
+  const result = prompt('Enter month number: ') - 1;
   // eslint-disable-next-line no-console
   if (result > 1 && result <= 12) console.log(months[result]);
   // eslint-disable-next-line no-alert
