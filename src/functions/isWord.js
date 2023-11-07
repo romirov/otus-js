@@ -1,3 +1,7 @@
 export function isWord(str) {
-  return String(str).split(' ').length === 1;
+  const array = String(str).split(' ');
+  if (array.length === 1 || array[1] === '') {
+    return true;
+  }
+  return false;
 }

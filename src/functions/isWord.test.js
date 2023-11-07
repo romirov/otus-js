@@ -9,6 +9,10 @@ describe('check string on words', () => {
     expect(isWord('word')).toBe(true);
   });
 
+  test('another one word with blank equals false', () => {
+    expect(isWord('word ')).toBe(true);
+  });
+
   test('two words equals false', () => {
     expect(isWord('one two')).toBe(false);
   });
