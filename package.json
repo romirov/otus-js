@@ -1,0 +1,11 @@
+{
+  "name": "otus-js",
+  "version": "1.0.0",
+  "description": "project to Otus",
+  "main": "src/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maru",
+  "license": "MIT"
+}
