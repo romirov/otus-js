@@ -1,10 +1,10 @@
-#Otus project
+# Otus project
 
-Ветки проекта
+## Ветки проекта
 
-##[Ветка с окружением](https://github.com/romirov/otus-js/tree/environment)
+### [Ветка с окружением](https://github.com/romirov/otus-js/tree/environment)
 
-###Добавлены
+#### Добавлено
 - Github Actions
 - script.js и index.html
 - npm init
@@ -22,4 +22,4 @@
 - npx mrm lint-staged
 - coverageThreshold добавлен в конфигурацию jest
 
-##[Ветка с домашним заданием по базовому синтаксису и тестам](https://github.com/romirov/otus-js/tree/basicDZ)
+### [Ветка с домашним заданием по базовому синтаксису и тестам](https://github.com/romirov/otus-js/tree/basicDZ)
