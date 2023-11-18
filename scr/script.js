@@ -110,23 +110,31 @@ function drawWeatherToCurrentLocation() {
 }
 
 /**
- * Обрабатывает ввод пользователя
+ * Удаление погоды в блоке div
  */
-function cityHandler() {
-  const cityName = document.querySelector(".input").value;
-
-  // удаление погоды
-  const div = document.querySelector(".inputCityWeather");
-  if (div.length !== 0) {
-    const title = document.querySelector(`.${div.className}-H2`);
-    const temp = document.querySelector(`.${div.className}-P`);
-    const img = document.querySelector(`.${div.className}-IMG`);
+function clearWeather(el) {
+  if (el.length !== 0) {
+    const title = document.querySelector(`.${el.className}-H2`);
+    const temp = document.querySelector(`.${el.className}-P`);
+    const img = document.querySelector(`.${el.className}-IMG`);
     if (title !== null) {
       title.remove();
       temp.remove();
       img.remove();
     }
   }
+}
+
+/**
+ * Обрабатывает ввод пользователя
+ */
+function cityHandler() {
+  // eslint-disable-next-line max-len
+  const cityName = document.querySelector(".input").value;
+
+  // удаление погоды
+  const div = document.querySelector(".inputCityWeather");
+  clearWeather(div);
 
   saveNewCityToLocalStorage(cityName);
 
@@ -151,6 +159,7 @@ function drawWeatherByInputField() {
   inputField.className = "input";
 
   const button = document.createElement("button");
+  button.className = "buttonInputField";
   button.innerText = "Submit";
 
   button.addEventListener("click", cityHandler);
@@ -160,32 +169,35 @@ function drawWeatherByInputField() {
 }
 
 /**
- * Обрабатывает ввод пользователя
- */
-function cityHandlerLink(el) {
-  const cityName = el.value;
-  const weather = getWeatherByCityName(cityName);
-  // eslint-disable-next-line no-console
-  console.log(weather);
-  drawWeather(document.querySelector(".inputCitiesWeather"), weather);
-}
-
-/**
  * Содержит логику работы по выводу городов из истории
  */
 function drawCitiesFromLocalStorage() {
   // получение городов из истории
-  const cities = localStorage.Object.keys(localStorage);
-  const div = document.querySelector(".inputCitiesWeather");
-  cities.array.forEach((element) => {
-    const a = document.createElement("a");
-    a.className = element;
+  const cities = localStorage.getItem("cities")
+    ? JSON.parse(localStorage.getItem("cities"))
+    : [];
+  const div = document.querySelector(".listSavedCities");
+  cities.forEach((cityName) => {
+    const br = document.createElement("br");
+    div.append(br);
+
+    const button = document.createElement("button");
+    button.innerText = cityName;
+    button.className = `buttonCitiesList`;
+
     // eslint-disable-next-line max-len
-    a.addEventListener(
-      "click",
-      cityHandlerLink(document.querySelector(`.${element}`)),
-    );
-    div.append(a);
+    button.addEventListener("click", () => {
+      // eslint-disable-next-line no-console
+      console.log(cityName);
+      getWeatherByCityName(cityName).then((currentLocationWeather) => {
+        // // удаление погоды
+        const div1 = document.querySelector(".weatherSavedCities");
+        clearWeather(div1);
+
+        drawWeather(div1, currentLocationWeather);
+      });
+    });
+    div.append(button);
   });
 }
 
